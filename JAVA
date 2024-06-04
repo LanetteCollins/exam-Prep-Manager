@@ -1,0 +1,20 @@
+function showPage(pageId) {
+    const pages = document.querySelectorAll('.page');
+    pages.forEach(page => page.classList.add('hidden'));
+
+    const activePage = document.getElementById(pageId);
+    activePage.classList.remove('hidden');
+}
+
+function showLoginModal() {
+    document.getElementById('loginModal').classList.remove('hidden');
+}
+
+function closeLoginModal() {
+    document.getElementById('loginModal').classList.add('hidden');
+}
+
+// Show the home page by default
+document.addEventListener('DOMContentLoaded', () => {
+    showPage('home');
+});
